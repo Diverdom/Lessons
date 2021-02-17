@@ -19,7 +19,7 @@ public class TaskM4 {
         int third = d /10;    //третья цифра
 
         int e = third*10;
-        int fourth = number - a - c -e;   //четвертая цифра
+        int fourth = number - a - c - e;   //четвертая цифра
 
 
         System.out.print(fourth);

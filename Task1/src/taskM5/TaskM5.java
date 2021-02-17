@@ -6,7 +6,7 @@ public class TaskM5 {
     public static void main(String[] args) {
 
 
-        int number = 1235; //исходное число
+        int number = 1215; //исходное число
 
         int first = number / 1000; // первая цифра
 
@@ -21,8 +21,8 @@ public class TaskM5 {
         int e = third*10;
         int fourth = number - a - c -e;   //четвертая цифра
 
-        System.out.println(first != second & second != third & third != fourth & first != third & first != fourth
-                & second != fourth);   // Выводит в консоль значение "True" в случае если все цифры числа уникальны.
+        System.out.println(first != second && second != third && third != fourth && first != third && first != fourth
+                && second != fourth);   // Выводит в консоль значение "True" в случае если все цифры числа уникальны.
 
 
         //ГДЕ МОЯ ПЕЧЕНЬКА БЛДЖАД?!!
