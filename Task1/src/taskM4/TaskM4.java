@@ -1,31 +1,37 @@
 package taskM4;
 
+import java.util.Scanner;
+
 public class TaskM4 {
-
-
+    /*Задание 4
+Определить число, полученное выписыванием в обратном порядке цифр
+любого 4-х значного натурального числа n.
+*/
     public static void main(String[] args) {
 
+        System.out.println("Enter four-digit number");
+        Scanner scanner = new Scanner(System.in);
 
-        int number = 1234; //исходное число
+        int number = scanner.nextInt();
+        int result;
 
-        int first = number / 1000; // первая цифра
+        result = number % 10; //получили первую цифру через остаток от деления на 10
+        number /= 10; //откинули последний знак в числе и присвоили новое значение перенной
 
-        int a = first*1000;
-        int b = number-a;
-        int second = b / 100;    //вторая цифра
+        result = (result * 10) + (number % 10); //сдвинули первую цифру влево через умножение на 10
+        // и прибавили остаток от деления (получили реверсированное 2х значное число)
+        number /= 10; //откинули второй знак из числа и присвоили новое значение переменной
 
-        int c = second*100;
-        int d = number - a -c;
-        int third = d /10;    //третья цифра
+        result = (result * 10) + (number % 10); //сдвинули число еще раз и прибавили третью цифру
+        number /= 10;//откинули третий знак из числа и присвоили новое значение переменной
 
-        int e = third*10;
-        int fourth = number - a - c - e;   //четвертая цифра
+        result = (result * 10) + (number % 10); //сдвинули число еще раз и прибавили четвертую цифру
 
+        System.out.println("Reversed number is " + result);
 
-        System.out.print(fourth);
-        System.out.print(third);
-        System.out.print(second);
-        System.out.print(first); //что-то я тут затупил... пришлось хуевертить импровизацию... через жопу)
+        scanner.close();
 
     }
+
+
 }
