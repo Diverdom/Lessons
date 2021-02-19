@@ -9,24 +9,33 @@ import java.util.Random;
 public class TaskM8 {
     public static void main(String[] args) {
 
-        Random rand = new Random(); // создаем рандомайзер
+        Random rand = new Random();                      // создаем рандомайзер
         int x = rand.nextInt();
-        int secondNumber = x / 10; //определяем значение предпоследней цифры
-        int number = x % 10; //определяем значение последней цифры
 
-        if (secondNumber == 1) {
-            System.out.println(x + " рублей"); //если значение предпоследней цифры равно 1 - окончание фразы будет "рублей"
-        }
-        //далее определяем правильное склонение, исходя из значения последней цифры в числе
+        int secondNumber = (x / 10) % 10;                //создаем переменнуи и присваиваем значение предпоследней цифры числа
+        int number = x % 10;                             //создаем переменнуи и присваиваем значение последней цифры
 
-        else if (number == 1) {
-            System.out.println(x + " рубль");
-        }
-        if (number == 5 || number == 6 || number == 7 || number == 8 || number == 9 || number == 0) {
-            System.out.println(x + " рублей");
-        }
-        if (x % 10 == 2 || x % 10 == 3 || x % 10 == 4) {
-            System.out.println(x + " рубля");
+        switch (secondNumber) {                          //Применяем оператор SWITCH
+            case (1): {                                  //если значение предпоследней цифры == 1 - окончание фразы будет "рублей"
+                System.out.println(x + " рублей");
+            }
+            break;                                       //останавливаем выполнение кейса
+
+
+            default:                                     //по умолчанию, все значения !=1 дают "true"
+
+                                                         //далее определяем правильное склонение, исходя из значения последней цифры в числе
+
+                if (number == 1) {                       //выбираем правильный падлеж для "рубль"
+                    System.out.println(x + " рубль");
+                }
+                if (number == 5 || number == 6 || number == 7 || number == 8 || number == 9 || number == 0) {
+                    System.out.println(x + " рублей");
+                }
+                if (number == 2 || number == 3 || number == 4) {
+                    System.out.println(x + " рубля");
+                }
+                break;                                   //останавливаем выполнение кейса
         }
     }
 }
