@@ -10,7 +10,7 @@ public class TaskM8_1 {
     public static void main(String[] args) {
 
         Random rand = new Random();                      // создаем рандомайзер
-        int x = rand.nextInt();
+        int x = rand.nextInt(1000) +1;
 
         int secondNumber = (x / 10) % 10;                //создаем переменную и присваиваем значение предпоследней цифры числа
         int number = x % 10;                             //создаем переменную и присваиваем значение последней цифры
@@ -19,21 +19,18 @@ public class TaskM8_1 {
         if (secondNumber == 1) {                         //если значение предпоследней цифры == 1 - окончание фразы будет "рублей"
             System.out.println(x + " рублей");
         }
-        else {                                           //далее определяем правильное склонение, исходя из значения последней цифры в числе
-
-            if (number == 1) {                           //выбираем правильный падеж для "рубль"
+        else if (number == 1) {                           //выбираем правильный падеж для "рубль"
                 System.out.println(x + " рубль");
             }
-            if (number == 5 || number == 6 || number == 7 || number == 8 || number == 9 || number == 0) {
+            else if (number >= 5 & number <= 9 | number == 0) {
                 System.out.println(x + " рублей");
             }
-            if (number == 2 || number == 3 || number == 4) {
+            else
                 System.out.println(x + " рубля");
             }
-
         }
-    }
-}
+
+
 
 
 
