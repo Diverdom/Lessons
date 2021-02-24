@@ -29,12 +29,12 @@ public class TaskM8 {
                 if (number == 1) {                       //выбираем правильный падеж для "рубль"
                     System.out.println(x + " рубль");
                 }
-                if (number == 5 || number == 6 || number == 7 || number == 8 || number == 9 || number == 0) {
+                else if (number >=5| number == 0) {
                     System.out.println(x + " рублей");
                 }
-                if (number == 2 || number == 3 || number == 4) {
+                else
                     System.out.println(x + " рубля");
-                }
+
                 break;                                   //останавливаем выполнение кейса
         }
     }
