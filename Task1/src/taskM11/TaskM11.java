@@ -6,18 +6,18 @@ package taskM11;
 public class TaskM11 {
     public static void main(String[] args) {
 
-        int number = 12;
+        int number = 5;
         int i;
-        boolean isComposite = false;
+        boolean isSimple = true;
         for (i = 2; i < number; i++) {
             if (number % i == 0) {
-                isComposite = true;
+                isSimple = false;
             }
         }
-        if (isComposite) {
-            System.out.println(number + " is not simple");
-        } else {
+        if (isSimple) {
             System.out.println(number + " is simple");
+        } else {
+            System.out.println(number + " is not simple");
         }
     }
 }

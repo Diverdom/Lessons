@@ -22,7 +22,7 @@ public class TaskM8_1 {
         else if (number == 1) {                           //выбираем правильный падеж для "рубль"
                 System.out.println(x + " рубль");
             }
-            else if (number >= 5 & number <= 9 | number == 0) {
+            else if (number >= 5 | number == 0) {
                 System.out.println(x + " рублей");
             }
             else

@@ -10,7 +10,7 @@ public class TaskM9 {
 
 
     public static void main(String[] args) {
-        int number = 6;
+        int number = 15;
         long factorial = 1;
         for (int i = 1; i <= number; i++) {
             factorial = factorial * i;
