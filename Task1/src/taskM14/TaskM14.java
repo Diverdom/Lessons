@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class TaskM14 {
     public static void main(String[] args) {
-        int array[] = new int[6]; //создаем массив
+        int[] array = new int[6]; //создаем массив
         Random random = new Random(); //создаем рандом
         for (int i = 0; i < 6; i++) {
             array[i] = random.nextInt(10); //заполняем массив случайными значениями от 0 до 10
@@ -19,8 +19,8 @@ public class TaskM14 {
         int indexMax = 0;
         int indexMin = 0;
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+        for (int j : array) {
+            System.out.println(j);
 
 
         }
