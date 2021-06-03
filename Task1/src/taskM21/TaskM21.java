@@ -12,21 +12,21 @@ public class TaskM21 {
         String string3 = "Whoop";
 
         Long start1 = System.currentTimeMillis();
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 100000; i++) {
             string1 += "-whoop";
         }
         Long finish1 = System.currentTimeMillis();
 
         Long start2 = System.currentTimeMillis();
         StringBuilder builder = new StringBuilder(string2);
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 100000; i++) {
             builder.append("-whoop");
         }
         Long finish2 = System.currentTimeMillis();
 
         Long start3 = System.currentTimeMillis();
         StringBuffer buffer = new StringBuffer(string3);
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 100000; i++) {
             buffer.append("-whoop");
         }
         Long finish3 = System.currentTimeMillis();
@@ -34,7 +34,5 @@ public class TaskM21 {
         System.out.println("via String: " + (finish1 - start1) + " ms.");
         System.out.println("via StringBuilder: " + (finish2 - start2) + " ms.");
         System.out.println("via StringBuffer: " + (finish3 - start3) + " ms.");
-
-
     }
 }
