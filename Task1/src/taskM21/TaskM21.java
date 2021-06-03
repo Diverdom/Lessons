@@ -2,7 +2,7 @@ package taskM21;
 /*Задание 21
 Напишите три цикла выполняющих многократное сложение строк, один с
 помощью оператора сложения и String, другой с помощью StringBuilder и метода
-append, а также аналогино для StringBuffer. Сравните скорость их выполнения.*/
+append, а также аналогино для StringBuffer. Сравните скорость их выполнения. */
 
 public class TaskM21 {
     public static void main(String[] args) {
