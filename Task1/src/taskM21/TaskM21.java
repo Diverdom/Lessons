@@ -8,8 +8,6 @@ public class TaskM21 {
     public static void main(String[] args) {
 
         String string1 = "Whoop";
-        String string2 = "Whoop";
-        String string3 = "Whoop";
 
         Long start1 = System.currentTimeMillis();
         for (int i = 0; i < 100000; i++) {
@@ -18,14 +16,14 @@ public class TaskM21 {
         Long finish1 = System.currentTimeMillis();
 
         Long start2 = System.currentTimeMillis();
-        StringBuilder builder = new StringBuilder(string2);
+        StringBuilder builder = new StringBuilder(string1);
         for (int i = 0; i < 100000; i++) {
             builder.append("-whoop");
         }
         Long finish2 = System.currentTimeMillis();
 
         Long start3 = System.currentTimeMillis();
-        StringBuffer buffer = new StringBuffer(string3);
+        StringBuffer buffer = new StringBuffer(string1);
         for (int i = 0; i < 100000; i++) {
             buffer.append("-whoop");
         }
